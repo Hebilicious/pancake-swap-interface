@@ -1,6 +1,6 @@
 import { ChainId, JSBI, Percent, Token, WETH } from '@pancakeswap-libs/sdk'
 
-export const ROUTER_ADDRESS = process.env.REACT_APP_PANCAKE_ROUTER
+export const ROUTER_ADDRESS = process.env.REACT_APP_PANCAKE_ROUTER ?? '0xd99d1c33f9fc3444f8101754abc46c52416550d1'
 
 // a list of tokens by chain
 type ChainTokenList = {
