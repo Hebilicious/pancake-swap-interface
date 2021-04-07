@@ -51,6 +51,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
  */
 export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: Token[] } } = {
   [ChainId.MAINNET]: {},
+  [ChainId.BSCTESTNET]: {},
 }
 
 // used for display in the default list when adding liquidity

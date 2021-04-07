@@ -33,7 +33,8 @@ async function fetchChunk(
   let resultsBlockNumber
   let returnData
   try {
-    [resultsBlockNumber, returnData] = await multicallContract.aggregate(
+    // eslint-disable-next-line @typescript-eslint/no-extra-semi
+    ;[resultsBlockNumber, returnData] = await multicallContract.aggregate(
       chunk.map((obj) => [obj.address, obj.callData])
     )
   } catch (error) {
@@ -138,8 +139,9 @@ export default function Updater(): null {
 
     const outdatedCallKeys: string[] = JSON.parse(serializedOutdatedCallKeys)
     if (outdatedCallKeys.length === 0) return
-    const calls = outdatedCallKeys.map((key) => parseCallKey(key))
-    // .filter(item => item.address.toLowerCase() !== '0xBCfCcbde45cE874adCB698cC183deBcF17952812'.toLowerCase())
+    const calls = outdatedCallKeys
+      .map((key) => parseCallKey(key))
+      .filter((item) => item.address.toLowerCase() !== '0x5438F65d96ED683b62bB539C1Bb1f6379314da7B'.toLowerCase())
 
     const chunkedCalls = chunkArray(calls, CALL_CHUNK_SIZE)
 

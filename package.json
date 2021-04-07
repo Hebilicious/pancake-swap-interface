@@ -73,6 +73,7 @@
     "cypress": "^4.11.0",
     "eslint": "^7.2.0",
     "husky": "4.3.5",
+    "patch-package": "^6.4.7",
     "prettier": "^2.1.2",
     "qs": "^6.9.4",
     "serve": "^11.3.0",
